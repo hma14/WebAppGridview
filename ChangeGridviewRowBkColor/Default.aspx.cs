@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,8 @@ namespace ChangeGridviewRowBkColor
         protected void Page_Load(object sender, EventArgs e)
         {
             DataAccess da = new DataAccess();
-            DataTable dt = da.GetData(100);
+            int rows = Convert.ToInt32(ConfigurationManager.AppSettings["Rows"]);
+            DataTable dt = da.GetData(rows);
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
