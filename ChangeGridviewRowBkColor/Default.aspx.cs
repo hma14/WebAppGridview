@@ -24,7 +24,7 @@ namespace ChangeGridviewRowBkColor
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                long getValue = Convert.ToInt64(e.Row.Cells[1].Text);
+                int getValue = Convert.ToInt32(e.Row.Cells[1].Text);
                 if (getValue > 1)
                 {
                    e.Row.CssClass = "redbackground";
