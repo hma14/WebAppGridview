@@ -10,6 +10,10 @@
              background-color: #f2283a;
              color: White;
         }
+
+        .errorMessage {
+            color:orangered;
+        }
     </style>
     <script type="text/javascript">
         setTimeout("location.reload(true)", 60000);
@@ -22,6 +26,9 @@
         <asp:GridView ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound">
             
         </asp:GridView>
+    
+        <br />
+        <asp:Label ID="ErrorMessage" runat="server" Text="" Visible="false" CssClass="errorMessage"></asp:Label>
     
     </div>
     </form>

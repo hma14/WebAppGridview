@@ -13,11 +13,18 @@ namespace ChangeGridviewRowBkColor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataAccess da = new DataAccess();
-            int rows = Convert.ToInt32(ConfigurationManager.AppSettings["Rows"]);
-            DataTable dt = da.GetData(rows);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            try {
+                DataAccess da = new DataAccess();
+                int rows = Convert.ToInt32(ConfigurationManager.AppSettings["Rows"]);
+                DataTable dt = da.GetData(rows);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.Text = ex.Message;
+                ErrorMessage.Visible = true;
+            }
         }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
