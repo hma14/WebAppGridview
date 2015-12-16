@@ -16,9 +16,10 @@ namespace ChangeGridviewRowBkColor
             try {
                 DataAccess da = new DataAccess();
                 int rows = Convert.ToInt32(ConfigurationManager.AppSettings["Rows"]);
-                DataTable dt = da.GetData(rows);
-                GridView1.DataSource = dt;
+                DataSet ds = da.GetData(rows);
+                GridView1.DataSource = ds;
                 GridView1.DataBind();
+                GridView1.Columns[2].Visible = false; // hide this column but its value accessible 
             }
             catch (Exception ex)
             {

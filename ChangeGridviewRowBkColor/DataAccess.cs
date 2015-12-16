@@ -62,7 +62,7 @@ namespace ChangeGridviewRowBkColor
             return ConfigurationManager.ConnectionStrings["DatabaseContext"].ConnectionString;
         }
 
-        public DataTable GetData(int rows)
+        public DataSet GetData(int rows)
         {
             using (SqlCommand sqlcommand = new SqlCommand("uspGetPhoneNumbers", sqlconn))
             {
@@ -70,9 +70,9 @@ namespace ChangeGridviewRowBkColor
                 sqlcommand.Parameters.AddWithValue("@rows", rows);
 
                  SqlDataAdapter adapter = new SqlDataAdapter(sqlcommand);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                return ds;
             }
         }
     }
