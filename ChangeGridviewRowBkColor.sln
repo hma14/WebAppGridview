@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeGridviewRowBkColor", "ChangeGridviewRowBkColor\ChangeGridviewRowBkColor.csproj", "{15CCA3ED-BC56-4DA9-9434-AF44D9640EFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15CCA3ED-BC56-4DA9-9434-AF44D9640EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CCA3ED-BC56-4DA9-9434-AF44D9640EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CCA3ED-BC56-4DA9-9434-AF44D9640EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CCA3ED-BC56-4DA9-9434-AF44D9640EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
